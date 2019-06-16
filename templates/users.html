@@ -1,0 +1,28 @@
+<html>
+
+<body>
+<a href = "{{url_for('logout') }}">sign out</a>
+<h1 style="font-size:80px;" >welcome {{user.name}}</h1>
+
+<div >
+<h1 style="font-size:80px;" >All users</h1>
+
+{% for Oneuser in Allusers %}
+
+
+<a href = "{{url_for('addfriend', user_id=user.id , seconduser_id=Oneuser.id )}}"> <h3>{{Oneuser.name}}</h3></a>
+
+
+
+</div>
+
+{% endfor %}
+
+
+
+
+
+
+</body>
+
+</html>

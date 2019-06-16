@@ -1,0 +1,29 @@
+<html>
+
+<body>
+<a href = "{{url_for('logout') }}">sign out</a>
+<h1 style="font-size:80px;" >welcome {{user.name}}</h1>
+
+<a href = "{{url_for('add',user_id=user.id)}}">
+ADD friend</a>
+<div >
+
+{% for Oneuser in friends %}
+
+
+<a href = "{{url_for('chat')}}"> <h3>{{Oneuser.name}}</h3></a>
+
+
+
+</div>
+
+{% endfor %}
+
+
+
+</div>
+
+</div>
+</body>
+
+</html>
